@@ -1,0 +1,22 @@
+:host{
+    display: block;
+    background-color: rgb(216, 160, 160);
+    color: red;
+    font-weight:bold;
+    position: relative;
+    padding: 5px;
+    border-radius: 10%;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#croix:hover{
+    cursor:pointer;
+}
+
+#croix{
+    width: 20px;
+    position: absolute;
+    right: 5px;
+}

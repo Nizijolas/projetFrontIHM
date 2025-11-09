@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+#cadreAuthentification{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+#cadreAuthentification > input {
+    width: 90%;
+    margin: 10px auto;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+#cadreAuthentification > label {
+    width: 90%;
+    margin: auto;
+}
+
+#cadreAuthentification > button {
+    width: 30%;
+    margin: auto;
+    padding: 5px;
+    background-color: lightskyblue;
+    border: solid 1px darkblue;
+    font-weight: bold;
+}
+
+#cadreAuthentification>button:hover {
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}
+
+p{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+#cadreAuthentification > p {
+    color: rgb(47, 125, 214);
+}
+
+p > span{
+    text-decoration: underline;
+}
+
+p > span:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+<p>
+    Ping Pong Matcher c'est l'appli idéale pour trouver un.e partenair.e pour jouer au Ping Pong
+    peut importe votre niveau, et vos envies.
+</p>
+<div id="cadreAuthentification">
+    <h2> Connectez vous à Ping Pong Matcher</h2>
+    <label for="">Login : </label>
+    <input type="text" placeholder="votre login..." [formControl]="loginControl">
+    <label for="">Mot de passe : </label>
+    <input (keydown.enter)="processConnexion()" type="password" placeholder="tapez votre mot de passe .."
+        [formControl]="mdpControl">
+    <button (click)="processConnexion()"> Se connecter</button>
+    @if(this.showError){
+    <app-error (close)="closeError()"> Login ou mot de passe incorrect </app-error>
+    }
+    <p> Pas de compte ? <span (click)="register()"> s'enregister </span> </p>
+
+</div>
