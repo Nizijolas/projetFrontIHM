@@ -1,0 +1,18 @@
+<div id="cadreLogo">
+    <img src="ping-pong.png" alt="logo raquettes ping pong">
+</div>
+<h3> Ping Pong Matcher</h3>
+<div id="user">
+
+@if (this.connexions.someoneIsLog) {
+    <a href=""> Voir mon profil</a>
+}
+@else {
+    <a id="showHorsLigne" (mouseenter)="showMessage()" (mouseleave)="closeMessage()" routerLink="/"> Hors Ligne </a>
+    <i class="fa-solid fa-user"></i>
+}
+</div>
+
+<div [ngClass]="showInfo()">
+    Connectez vous pour accéder à cette section
+</div>

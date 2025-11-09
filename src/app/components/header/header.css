@@ -1,0 +1,57 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: lightblue;
+    position: relative;
+}
+
+#cadreLogo{
+    height: 50%;
+    width: 70px;
+    display: block;
+    position: absolute;
+    left: 5px;
+}
+
+#cadreLogo > img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+#user{
+    position: absolute;
+    right: 20px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showHorsLigne:hover{
+    cursor: pointer;
+}
+
+.notToShow{
+    display: none;
+}
+
+.toShow{
+    font-style: italic;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    z-index: 100;
+    background: white;
+    color: grey;
+    padding: 5px;
+    font-size:x-small
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
