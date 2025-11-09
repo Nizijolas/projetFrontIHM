@@ -20,10 +20,19 @@ export class Login {
   processConnexion(): void {
     if (this.loginControl.value == this.connexions.paul[0]
       && this.mdpControl.value == this.connexions.paul[1]) {
+      // on a Paul qui se connecte
       this.connexions.pseudoOfLog = "Paul";
       this.connexions.someoneIsLog = true;
       this.router.navigateByUrl('/userHome');
 
+    }
+    else if (this.loginControl.value == this.connexions.laura[0]
+      && this.mdpControl.value == this.connexions.laura[1]
+    ){
+      //on a Laura qui se connecte
+      this.connexions.pseudoOfLog = "Laura";
+      this.connexions.someoneIsLog = true;
+      this.router.navigateByUrl('/userHome');
     }
     else
       this.showError = true;
@@ -33,7 +42,7 @@ export class Login {
     this.showError = false;
   }
 
-  register(): void{
+  register(): void {
     alert("On ne peut pas s'enregister car pas de BDD dans cette version");
   }
 

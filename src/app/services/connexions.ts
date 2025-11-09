@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Connexions {
-  public paul:any[] = ["Paul", "azerty"];
+  public paul:string[] = ["Paul", "azerty"];
+  public laura:string[] = ["Laura", "azerty"];
   public someoneIsLog:boolean = false;
   public pseudoOfLog:string = "";
 }
