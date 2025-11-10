@@ -1,14 +1,17 @@
 :host{
-    display: block;
+    display: flex;
     background-color: rgb(216, 160, 160);
     color: red;
     font-weight:bold;
     position: relative;
-    padding: 5px;
+    padding-inline: 20px;
+    padding-block: 5px;
     border-radius: 10%;
     width: 50%;
     margin: auto;
     margin-top: 10px;
+    align-items: center;
+
 }
 
 #croix:hover{
@@ -16,7 +19,7 @@
 }
 
 #croix{
-    width: 20px;
+    width: 15px;
     position: absolute;
     right: 5px;
 }

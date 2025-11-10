@@ -1,0 +1,30 @@
+@if ( user() == "Laura"){
+<div id="cadreProfil">
+    <div id="photo">
+        <img src="laura.jpg" alt="photo de profil">
+    </div>
+    <div id="infos">
+        <p> Niveau : expérimentée</p>
+        <p> âge : 27 ans</p>
+        <p> lieu : Grenoble & alentours</p>
+        <p id="bio"> bio : Bonjour je suis sur ping pong matcher pour chercher des partenair.e.s de jeu de tous niveau
+            même
+            débutant car j'aime transmettre ce que je sais</p>
+        <div class="avis">
+            <span class="avis-titre">Avis :</span>
+            <span class="etoile">⭐</span>
+            <span class="note">4.5</span>
+            <span class="note-max">/ 5</span>
+            <span class="nb-avis">(23 notes)</span>
+        </div>
+    </div>
+    <div id="modifier" (click)="toggleShowEdit()">
+        <span class="icone-crayon">✏️</span>Modifier
+    </div>
+</div>
+}
+
+
+@if (showEdit) {
+    <app-editionmenu (close)="toggleShowEdit()"></app-editionmenu>
+}

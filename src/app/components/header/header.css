@@ -55,3 +55,15 @@ a{
     text-decoration: none;
     color: black;
 }
+
+#user{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#user:hover{
+    border-color: darkblue;
+    background-color: #55b5e0;
+}
+

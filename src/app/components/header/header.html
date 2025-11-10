@@ -5,7 +5,7 @@
 <div id="user">
 
 @if (this.connexions.someoneIsLog) {
-    <a href=""> Voir mon profil</a>
+    <a routerLink="/userHome"> Voir mon profil </a>
 }
 @else {
     <a id="showHorsLigne" (mouseenter)="showMessage()" (mouseleave)="closeMessage()" routerLink="/"> Hors Ligne </a>

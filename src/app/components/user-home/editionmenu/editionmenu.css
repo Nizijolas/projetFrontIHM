@@ -1,0 +1,16 @@
+:host{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+}
+#croix:hover {
+    cursor: pointer;
+}
+
+#croix {
+    width: 15px;
+    position: absolute;
+    right: 5px;
+}

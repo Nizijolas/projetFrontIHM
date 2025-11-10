@@ -1,5 +1,7 @@
 @if(isConnected()){
     <h2> Bienvenue {{ getPseudo()}}</h2>
+    <p>Votre profil : </p>
+    <app-profile-card [user]="getPseudo()"></app-profile-card>
 }
 @else {
     <p> Vous n'êtes pas connecté </p>
