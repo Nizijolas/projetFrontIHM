@@ -1,1 +1,26 @@
-<img id="croix" (click)="sendCloseMessage()" src="cross.svg" alt="croix pour fermer">
+@if(connexion.someoneIsLog){
+<div class="form-container">
+    @if(connexion.pseudoOfLog == "Laura"){
+            <label for="niveau">Niveau</label>
+            <input type="text" id="niveau" name="niveau" placeholder="Entrez votre niveau" [formControl]="lauraNiveauInput" >
+
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" placeholder="Entrez votre âge" [formControl]="lauraAgeInput">
+            
+            <label for="lieu">Lieu</label>
+            <input type="text" id="lieu" name="lieu" placeholder="Entrez votre lieu" [formControl]="lauraLieuInput">
+            
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="5" placeholder="Parlez-nous de vous..." [formControl]="lauraBioInput"></textarea>
+    }
+    @else {
+    }
+
+    <button id="save" (click)="processSaving()"> Sauvegarder </button>
+    //mettre succès
+</div>
+
+}
+@else{
+    <app-notconnected></app-notconnected>
+}

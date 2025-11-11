@@ -1,5 +1,7 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { Editionmenu } from '../editionmenu/editionmenu';
+import { Router } from '@angular/router';
+import { Connexions } from '../../../services/connexions';
 @Component({
   selector: 'app-profile-card',
   imports: [Editionmenu],
@@ -7,10 +9,16 @@ import { Editionmenu } from '../editionmenu/editionmenu';
   styleUrl: './profile-card.css',
 })
 export class ProfileCard {
+  router = inject(Router);
   user = input.required<string>();
-  showEdit:boolean = false;
+  connexions = inject(Connexions);
 
-  toggleShowEdit():void{
-    this.showEdit = !this.showEdit;
+
+
+
+  navigateToEdit(){
+    this.router.navigateByUrl('/edit');
   }
+
+  
 }

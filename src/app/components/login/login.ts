@@ -3,7 +3,6 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Connexions } from '../../services/connexions';
 import { Router } from '@angular/router';
 import { Error } from "../error/error";
-import { setAlternateWeakRefImpl } from '@angular/core/primitives/signals';
 @Component({
   selector: 'app-login',
   imports: [ReactiveFormsModule, Error],

@@ -1,35 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-:host{
+:host {
     display: block;
     margin: auto;
-    width: 80%;
+    width: 100%;
 }
-#cadreAuthentification{
+
+#cadreAuthentification {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 80%;
+    max-width: 500px;
     margin: auto;
     margin-top: 30px;
     border: solid 1px lightblue;
     border-radius: 3%;
     padding: 30px;
 }
-#cadreAuthentification > input {
+
+#cadreAuthentification>input {
     width: 90%;
     margin: 10px auto;
     height: 30px;
     text-align: center;
     font-weight: bold;
-    
+
 }
 
-#cadreAuthentification > label {
+#cadreAuthentification>label {
     width: 90%;
     margin: auto;
 }
 
-#cadreAuthentification > button {
+#cadreAuthentification>button {
     width: 30%;
     margin: auto;
     padding: 5px;
@@ -44,19 +46,20 @@
     color: white;
 }
 
-p{
-    width: 80%;
+p {
+    max-width: 500px;
     margin: auto;
     margin-top: 20px;
 }
-#cadreAuthentification > p {
+
+#cadreAuthentification>p {
     color: rgb(47, 125, 214);
 }
 
-p > span{
+p>span {
     text-decoration: underline;
 }
 
-p > span:hover{
+p>span:hover {
     cursor: pointer;
 }

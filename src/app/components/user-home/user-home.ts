@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Connexions } from '../../services/connexions';
 import { ProfileCard } from "./profile-card/profile-card";
+import { Notconnected } from '../notconnected/notconnected';
 
 @Component({
   selector: 'app-user-home',
-  imports: [ProfileCard],
+  imports: [ProfileCard, Notconnected],
   templateUrl: './user-home.html',
   styleUrl: './user-home.css',
 })
