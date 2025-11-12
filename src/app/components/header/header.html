@@ -1,18 +1,17 @@
-<div id="cadreLogo">
-    <img src="ping-pong.png" alt="logo raquettes ping pong">
+<div id="title">
+    <div id="cadreLogo">
+        <img src="ping-pong.png" alt="logo raquettes ping pong">
+    </div>
+    <h3> Ping Pong Matcher</h3>
 </div>
-<h3> Ping Pong Matcher</h3>
-<div id="user">
+@if (this.connexions.someoneIsLog) {
 
-    @if (this.connexions.someoneIsLog) {
-    <a routerLink="/userHome"> Voir mon profil </a>
-    <a id="logOut" (click)="processDeconnexion()"> Se déconnecter </a>
-    }
-    @else {
-    <a id="showHorsLigne" (mouseenter)="showMessage()" (mouseleave)="closeMessage()" routerLink="/"> Se connecter</a>
-    }
-</div>
+<div id="nav">
 
-<div [ngClass]="showInfo()">
-    Connectez vous pour voir votre profil
+    <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" routerLink="/trouverDesPersonnes"> Chercher
+        des personnes</a>
+    <a [ngClass]="getUrl() == '/messages' ? 'active' : ''" routerLink="/messages"> Messages </a>
+    <a [ngClass]="getUrl() == '/userHome' ? 'active' : ''" routerLink="/userHome"> Mon profil </a>
+    <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>
+}

@@ -11,23 +11,15 @@ import { NgClass } from '@angular/common';
 export class Header {
   public connexions = inject(Connexions);
   public router = inject(Router);
-  showInfo = signal("notToShow");
-  alert():void{
-    window.alert("hey");
-  }
 
-  showMessage():void{
-    this.showInfo.set("toShow");
-  }
-
-  closeMessage():void{
-    this.showInfo.set("notToShow");
-  }
-
-  processDeconnexion(){
+  processDeconnexion() {
     this.connexions.someoneIsLog = false;
     this.connexions.pseudoOfLog = "";
     this.router.navigateByUrl('/');
+  }
+
+  getUrl():string{
+    return this.router.url;
   }
 
 }

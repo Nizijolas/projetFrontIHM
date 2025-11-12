@@ -1,18 +1,20 @@
 :host{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:space-around;
     align-items: center;
     height: 150px;
     background-color: lightblue;
-    position: relative;
 }
-
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 #cadreLogo{
-    height: 50%;
-    width: 70px;
+    width: 60px;
     display: block;
-    position: absolute;
-    left: 5px;
 }
 
 #cadreLogo > img {
@@ -21,37 +23,15 @@
     width: 100%;
 }
 
-#user{
-    position: absolute;
-    right: 20px;
-    gap: 5px;
-    display: flex;
-    flex-direction: column;
+#nav{
+    border-top: solid 1px;
+    padding: 20px 0;
     justify-content: center;
+    gap: 10px;
     align-items: center;
-    font-size: small;
+    width: 60%;
 }
 
-#showHorsLigne:hover{
-    cursor: pointer;
-}
-
-
-.notToShow{
-    display: none;
-}
-
-.toShow{
-    font-style: italic;
-    position: absolute;
-    right: 10px;
-    top: 3px;
-    z-index: 100;
-    background: white;
-    color: grey;
-    padding: 5px;
-    font-size:x-small
-}
 
 a{
     text-decoration: none;
@@ -59,15 +39,15 @@ a{
     padding: 5px;
 }
 
-#user{
-    border: 1px solid;
-    border-radius: 5%;
-    overflow: hidden;
+#logOut{
+    color: gray
 }
 
+#center{
+    display: flex;
+    flex-direction: column;
+}
 
-#logOut{
-    width: 100%;
-    background-color: gray;
-    color: lightgray
+.active{
+    border-bottom: 1px solid;
 }

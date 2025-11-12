@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    background-color: rgb(160, 214, 144);
+    color: rgb(65, 143, 35);
+    font-weight: bold;
+    position: relative;
+    padding-inline: 20px;
+    padding-block: 5px;
+    border-radius: 10%;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+
+}
+
+#croix:hover {
+    cursor: pointer;
+}
+
+#croix {
+    width: 15px;
+    position: absolute;
+    right: 5px;
+}

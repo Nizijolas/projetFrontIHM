@@ -2,16 +2,17 @@ import { Component, inject, signal } from '@angular/core';
 import { Connexions } from '../../../services/connexions';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { Notconnected } from '../../notconnected/notconnected';
-
+import { Success } from '../../success/success';
 @Component({
   selector: 'app-editionmenu',
-  imports: [ReactiveFormsModule, Notconnected],
+  imports: [ReactiveFormsModule, Notconnected, Success],
   templateUrl: './editionmenu.html',
   styleUrl: './editionmenu.css',
 })
 export class Editionmenu {
   connexion = inject(Connexions);
   user = signal(this.connexion.pseudoOfLog);
+  showSucess:boolean = false;
 
   //Pour Laura
   ageInput = new FormControl(this.connexion.age());
@@ -34,6 +35,11 @@ export class Editionmenu {
       this.connexion.paulLieu.set(this.lieuInput.value ?? this.connexion.paulLieu());
       this.connexion.paulBio.set(this.bioInput.value ?? this.connexion.paulBio());
     }
+    this.showSucess = true;
+  }
+
+  toggleShowSucess():void{
+    this.showSucess = false;
   }
   
 }

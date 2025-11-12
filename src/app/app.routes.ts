@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { Login } from './components/login/login';
 import { UserHome } from './components/user-home/user-home';
 import { Editionmenu } from './components/user-home/editionmenu/editionmenu';
+import { Findpeople } from './components/findpeople/findpeople';
+import { Messages } from './components/messages/messages';
 
 export const routes: Routes = [
     {
@@ -15,5 +17,13 @@ export const routes: Routes = [
     {
         path:'edit',
         component:Editionmenu
+    },
+    {
+        path:'trouverDesPersonnes',
+        component:Findpeople
+    },
+    {
+        path: 'messages',
+        component:Messages
     }
 ];

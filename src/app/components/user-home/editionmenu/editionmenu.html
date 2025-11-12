@@ -12,7 +12,9 @@
             <label for="bio">Bio</label>
             <textarea id="bio" name="bio" rows="5" placeholder="Parlez-nous de vous..." [formControl]="bioInput"></textarea>
     <button id="save" (click)="processSaving()"> Sauvegarder </button>
-    //mettre succès
+    @if (this.showSucess){
+        <app-success (close)="toggleShowSucess()"> Modifications effectuées </app-success>
+    }
 </div>
 
 }
