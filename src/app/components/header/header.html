@@ -4,12 +4,13 @@
 <h3> Ping Pong Matcher</h3>
 <div id="user">
 
-@if (this.connexions.someoneIsLog) {
+    @if (this.connexions.someoneIsLog) {
     <a routerLink="/userHome"> Voir mon profil </a>
-}
-@else {
-    <a id="showHorsLigne" (mouseenter)="showMessage()" (mouseleave)="closeMessage()" routerLink="/"> Hors Ligne </a>
-}
+    <a id="logOut" (click)="processDeconnexion()"> Se déconnecter </a>
+    }
+    @else {
+    <a id="showHorsLigne" (mouseenter)="showMessage()" (mouseleave)="closeMessage()" routerLink="/"> Se connecter</a>
+    }
 </div>
 
 <div [ngClass]="showInfo()">

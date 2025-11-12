@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Connexions } from '../../services/connexions';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import { NgClass } from '@angular/common';
 })
 export class Header {
   public connexions = inject(Connexions);
+  public router = inject(Router);
   showInfo = signal("notToShow");
   alert():void{
     window.alert("hey");
@@ -21,6 +22,12 @@ export class Header {
 
   closeMessage():void{
     this.showInfo.set("notToShow");
+  }
+
+  processDeconnexion(){
+    this.connexions.someoneIsLog = false;
+    this.connexions.pseudoOfLog = "";
+    this.router.navigateByUrl('/');
   }
 
 }

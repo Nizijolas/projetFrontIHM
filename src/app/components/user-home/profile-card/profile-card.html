@@ -1,22 +1,21 @@
+
 <div id="cadreProfil">
-    @if(user() == "Laura" ){
     <div id="photo">
-        <img src="laura.jpg" alt="photo de profil">
+        <img src="{{connexions.src()}}" alt="photo de profil">
     </div>
     <div id="infos">
-        <p> Niveau : {{connexions.lauraNiveau()}}</p>
-        <p> âge : {{connexions.lauraAge()}}</p>
-        <p> lieu : {{connexions.lauraLieu()}}</p>
-        <p id="bio"> {{connexions.lauraBio()}}</p>
+        <p> Niveau : {{connexions.niveau()}}</p>
+        <p> âge : {{connexions.age()}}</p>
+        <p> lieu : {{connexions.lieu()}}</p>
+        <p id="bio"> {{connexions.bio()}}</p>
         <div class="avis">
             <span class="avis-titre">Avis :</span>
             <span class="etoile">⭐</span>
-            <span class="note">{{connexions.lauraNote()}}</span>
+            <span class="note">{{connexions.note()}}</span>
             <span class="note-max">/ 5</span>
-            <span class="nb-avis">({{connexions.lauraNbNotes()}} notes)</span>
+            <span class="nb-avis">({{connexions.nbNotes()}} notes)</span>
         </div>
     </div>
-    }
     <div id="modifier" (click)="navigateToEdit()">
         <span class=" icone-crayon">✏️</span>Modifier
     </div>

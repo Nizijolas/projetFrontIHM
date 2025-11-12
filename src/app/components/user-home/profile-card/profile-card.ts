@@ -10,7 +10,6 @@ import { Connexions } from '../../../services/connexions';
 })
 export class ProfileCard {
   router = inject(Router);
-  user = input.required<string>();
   connexions = inject(Connexions);
 
 

@@ -14,22 +14,25 @@ export class Editionmenu {
   user = signal(this.connexion.pseudoOfLog);
 
   //Pour Laura
-  lauraAgeInput = new FormControl(this.connexion.lauraAge());
-  lauraNiveauInput = new FormControl(this.connexion.lauraNiveau());
-  lauraLieuInput = new FormControl(this.connexion.lauraLieu());
-  lauraBioInput = new FormControl(this.connexion.lauraBio());
+  ageInput = new FormControl(this.connexion.age());
+  niveauInput = new FormControl(this.connexion.niveau());
+  lieuInput = new FormControl(this.connexion.lieu());
+  bioInput = new FormControl(this.connexion.bio());
 
 
   processSaving():void{
 
     if ( this.user()== "Laura"){
-      this.connexion.lauraAge.set(this.lauraAgeInput.value ?? this.connexion.lauraAge());
-      this.connexion.lauraNiveau.set(this.lauraNiveauInput.value ?? this.connexion.lauraNiveau());
-      this.connexion.lauraLieu.set(this.lauraLieuInput.value ?? this.connexion.lauraLieu());
-      this.connexion.lauraBio.set(this.lauraBioInput.value ?? this.connexion.lauraBio());
-
-
-
+      this.connexion.lauraAge.set(this.ageInput.value ?? this.connexion.lauraAge());
+      this.connexion.lauraNiveau.set(this.niveauInput.value ?? this.connexion.lauraNiveau());
+      this.connexion.lauraLieu.set(this.lieuInput.value ?? this.connexion.lauraLieu());
+      this.connexion.lauraBio.set(this.bioInput.value ?? this.connexion.lauraBio());
+    }
+    else{
+      this.connexion.paulAge.set(this.ageInput.value ?? this.connexion.paulAge());
+      this.connexion.paulNiveau.set(this.niveauInput.value ?? this.connexion.paulNiveau());
+      this.connexion.paulLieu.set(this.lieuInput.value ?? this.connexion.paulLieu());
+      this.connexion.paulBio.set(this.bioInput.value ?? this.connexion.paulBio());
     }
   }
   

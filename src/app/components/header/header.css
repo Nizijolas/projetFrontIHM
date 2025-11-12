@@ -29,11 +29,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: small;
 }
 
 #showHorsLigne:hover{
     cursor: pointer;
 }
+
 
 .notToShow{
     display: none;
@@ -54,16 +56,18 @@
 a{
     text-decoration: none;
     color: black;
+    padding: 5px;
 }
 
 #user{
     border: 1px solid;
-    padding: 5px;
     border-radius: 5%;
+    overflow: hidden;
 }
 
-#user:hover{
-    border-color: darkblue;
-    background-color: #55b5e0;
-}
 
+#logOut{
+    width: 100%;
+    background-color: gray;
+    color: lightgray
+}
