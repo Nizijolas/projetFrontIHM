@@ -5,6 +5,7 @@
     align-items: center;
     height: 150px;
     background-color: lightblue;
+    position: relative;
 }
 #title{
     display: flex;
@@ -23,7 +24,7 @@
     width: 100%;
 }
 
-#nav{
+#navDesktop{
     border-top: solid 1px;
     padding: 20px 0;
     justify-content: center;
@@ -50,4 +51,39 @@ a{
 
 .active{
     border-bottom: 1px solid;
+}
+
+#navMobile{
+    display: none;
+}
+
+@media screen and (max-width:650px) {
+
+    #navDesktop{
+        display: none;
+    }
+
+    #navMobile{
+        display: block;
+    }
+
+    #menuDeroulant{
+        display: none;
+    }
+    
+}
+
+#menuDeroulant{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: -100px;
+    z-index: 10;
+    background-color:  lightblue;
+}
+
+#menuDeroulant > a {
+    width: 50%;
+    margin: auto;
 }

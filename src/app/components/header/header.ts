@@ -11,6 +11,7 @@ import { NgClass } from '@angular/common';
 export class Header {
   public connexions = inject(Connexions);
   public router = inject(Router);
+  showBurger: boolean = false;
 
   processDeconnexion() {
     this.connexions.someoneIsLog = false;
@@ -18,8 +19,12 @@ export class Header {
     this.router.navigateByUrl('/');
   }
 
-  getUrl():string{
+  getUrl(): string {
     return this.router.url;
+  }
+
+  toggleBurgerMenu(): void {
+    this.showBurger = !this.showBurger;
   }
 
 }
