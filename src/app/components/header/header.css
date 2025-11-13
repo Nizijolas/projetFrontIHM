@@ -39,6 +39,9 @@ a{
     color: black;
     padding: 5px;
 }
+a:hover{
+    cursor: pointer;
+}
 
 #logOut{
     color: gray

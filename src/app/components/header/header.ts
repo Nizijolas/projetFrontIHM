@@ -27,4 +27,9 @@ export class Header {
     this.showBurger = !this.showBurger;
   }
 
+  navigate(path:string):void{
+    this.showBurger = false;
+    this.router.navigateByUrl(path);
+  }
+
 }
