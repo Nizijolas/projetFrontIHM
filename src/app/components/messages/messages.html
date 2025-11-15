@@ -1,7 +1,23 @@
 @if( connexions.someoneIsLog){
-@for( m of connexions.messages ; track $index ){
-    <p> {{ m.player?.name}}</p>
+@if( connexions.messages.length == 0){
+<p> Vous n'avez aucune conversation en cours rendez vous dans la section chercher des personnes</p>
 }
+@else{
+<div id="cadreMessages">
+    <ul id="listeConversations">
+        @for( m of connexions.messages ; track $index ){
+        <li [ngClass]="this.actualPlayer().name == m.player?.name ? 'active':''"
+        
+        (click)="setNew(m.player?.name??'')">
+            {{ m.player?.name}}
+        </li>
+        }
+    </ul>
+    <app-conversation [player]="actualPlayer()">
+    </app-conversation>
+</div>
+}
+
 }
 @else {
 <app-notconnected></app-notconnected>

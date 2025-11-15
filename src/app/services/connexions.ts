@@ -14,7 +14,6 @@ export class Connexions {
   public fakePlayers = inject(FakePlayer);
 
   findAndAddMessage(name: string) {
-    console.log(this.messages.find(m => m.player?.name == name));
     if (this.messages.find(m => m.player?.name == name) == undefined){
       let myPlayer:PlayerInfo = this.fakePlayers.findByName(name)?? PlayerInfo.undefined;
       if ( myPlayer.name == "undefined")

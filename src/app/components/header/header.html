@@ -4,8 +4,8 @@
     </div>
     <h3> Ping Pong Matcher</h3>
     @if(this.connexions.someoneIsLog){
-    <div id="navMobile">
-        <button (click)="toggleBurgerMenu()"> burger</button>
+    <div id="navMobile" (click)="toggleBurgerMenu()">
+        <img src="burger.png" alt="burger menu">
     </div>
     }
 </div>
@@ -20,11 +20,11 @@
     <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>
 }
-
 @if(this.connexions.someoneIsLog && this.showBurger)
 {
 <div id="menuDeroulant">
-    <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" (click)="navigate('/trouverDesPersonnes')"> Chercher
+    <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" (click)="navigate('/trouverDesPersonnes')">
+        Chercher
         des personnes</a>
     <a [ngClass]="getUrl() == '/messages' ? 'active' : ''" (click)="navigate('/messages')"> Messages </a>
     <a [ngClass]="getUrl() == '/userHome' ? 'active' : ''" (click)="navigate('/userHome')"> Mon profil </a>

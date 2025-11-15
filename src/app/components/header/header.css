@@ -1,30 +1,32 @@
-:host{
+:host {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     height: 150px;
     background-color: lightblue;
     position: relative;
 }
-#title{
+
+#title {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-#cadreLogo{
+
+#cadreLogo {
     width: 60px;
     display: block;
 }
 
-#cadreLogo > img {
+#cadreLogo>img {
     object-fit: contain;
     height: 100%;
     width: 100%;
 }
 
-#navDesktop{
+#navDesktop {
     border-top: solid 1px;
     padding: 20px 0;
     justify-content: center;
@@ -34,59 +36,77 @@
 }
 
 
-a{
+a {
     text-decoration: none;
     color: black;
     padding: 5px;
 }
-a:hover{
+
+a:hover {
     cursor: pointer;
 }
 
-#logOut{
+#logOut {
     color: gray
 }
 
-#center{
+#center {
     display: flex;
     flex-direction: column;
 }
 
-.active{
+.active {
     border-bottom: 1px solid;
 }
 
-#navMobile{
+#navMobile {
     display: none;
 }
 
 @media screen and (max-width:650px) {
 
-    #navDesktop{
+    #navDesktop {
         display: none;
     }
 
-    #navMobile{
+    #navMobile {
+        position: absolute;
+        right: 10px;
         display: block;
+        width: 60px;
+        height: 60px;
     }
 
-    #menuDeroulant{
+    #navMobile:hover {
+        cursor: pointer;
+    }
+
+    #navMobile>img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #menuDeroulant {
         display: none;
     }
-    
+
 }
 
-#menuDeroulant{
+#menuDeroulant {
     position: absolute;
+    top: 130px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    bottom: -100px;
+    width: 80%;
     z-index: 10;
-    background-color:  lightblue;
+    background-color: lightblue;
+    border-radius: 5px;
+    border: solid 2px rgb(48, 61, 136);
 }
 
-#menuDeroulant > a {
+#menuDeroulant>a {
+    padding: 30px;
     width: 50%;
     margin: auto;
 }
