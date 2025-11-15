@@ -14,4 +14,7 @@ export class Findpeople {
   connexions = inject(Connexions);
   fakePlayers = inject(FakePlayer);
 
+  createMessage(e:string){
+    this.connexions.findAndAddMessage(e);
+  }
 }

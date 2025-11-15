@@ -1,4 +1,7 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
+import { Message } from '../model/message';
+import { FakePlayer } from './fake-player';
+import { PlayerInfo } from '../model/player-info';
 
 @Injectable({
   providedIn: 'root',
@@ -6,6 +9,20 @@ import { Injectable, signal } from '@angular/core';
 export class Connexions {
   public paul: string[] = ["Paul", "azerty"];
   public laura: string[] = ["Laura", "azerty"];
+
+  public messages: Message[] = [];
+  public fakePlayers = inject(FakePlayer);
+
+  findAndAddMessage(name: string) {
+    console.log(this.messages.find(m => m.player?.name == name));
+    if (this.messages.find(m => m.player?.name == name) == undefined){
+      let myPlayer:PlayerInfo = this.fakePlayers.findByName(name)?? PlayerInfo.undefined;
+      if ( myPlayer.name == "undefined")
+        return;
+      this.messages.push(new Message(name, myPlayer))
+
+    };
+  }
 
   public someoneIsLog: boolean = false;
 

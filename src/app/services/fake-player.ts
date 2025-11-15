@@ -9,7 +9,6 @@ export class FakePlayer {
 
   constructor() {
 
-
     this.fakePlayers[0] = new PlayerInfo(
       "Léa",
       "lea.png",
@@ -20,7 +19,6 @@ export class FakePlayer {
       4.3,
       19
     );
-
  
 
     this.fakePlayers[1] = new PlayerInfo(
@@ -56,5 +54,9 @@ export class FakePlayer {
       23
     );
 
+  }
+
+  findByName(name:string):PlayerInfo | undefined{
+    return this.fakePlayers.find(p=> p.name == name);
   }
 }

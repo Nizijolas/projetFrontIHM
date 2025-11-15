@@ -1,1 +1,8 @@
-<p>messages works!</p>
+@if( connexions.someoneIsLog){
+@for( m of connexions.messages ; track $index ){
+    <p> {{ m.player?.name}}</p>
+}
+}
+@else {
+<app-notconnected></app-notconnected>
+}
