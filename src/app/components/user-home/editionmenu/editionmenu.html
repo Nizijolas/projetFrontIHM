@@ -1,23 +1,26 @@
 @if(connexion.someoneIsLog){
+<div id="retour" (click)="backToProfile()">
+    <img src="arrow-left.svg" alt="flèche de retour">
+</div>
 <div class="form-container">
-            <label for="niveau">Niveau</label>
-            <input type="text" id="niveau" name="niveau" placeholder="Entrez votre niveau" [formControl]="niveauInput" >
+    <label for="niveau">Niveau</label>
+    <input type="text" id="niveau" name="niveau" placeholder="Entrez votre niveau" [formControl]="niveauInput">
 
-            <label for="age">Âge</label>
-            <input type="number" id="age" name="age" placeholder="Entrez votre âge" [formControl]="ageInput">
-            
-            <label for="lieu">Lieu</label>
-            <input type="text" id="lieu" name="lieu" placeholder="Entrez votre lieu" [formControl]="lieuInput">
-            
-            <label for="bio">Bio</label>
-            <textarea id="bio" name="bio" rows="5" placeholder="Parlez-nous de vous..." [formControl]="bioInput"></textarea>
+    <label for="age">Âge</label>
+    <input type="number" id="age" name="age" placeholder="Entrez votre âge" [formControl]="ageInput">
+
+    <label for="lieu">Lieu</label>
+    <input type="text" id="lieu" name="lieu" placeholder="Entrez votre lieu" [formControl]="lieuInput">
+
+    <label for="bio">Bio</label>
+    <textarea id="bio" name="bio" rows="5" placeholder="Parlez-nous de vous..." [formControl]="bioInput"></textarea>
     <button id="save" (click)="processSaving()"> Sauvegarder </button>
     @if (this.showSucess){
-        <app-success (close)="toggleShowSucess()"> Modifications effectuées </app-success>
+    <app-success (close)="toggleShowSucess()"> Modifications effectuées </app-success>
     }
 </div>
 
 }
 @else{
-    <app-notconnected></app-notconnected>
+<app-notconnected></app-notconnected>
 }

@@ -63,3 +63,9 @@ p>span {
 p>span:hover {
     cursor: pointer;
 }
+
+@media  screen and (max-width:650px) {
+    #cadreAuthentification{
+        margin: 10px;
+    }
+}

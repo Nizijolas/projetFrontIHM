@@ -1,0 +1,29 @@
+<div id="cadreProfil">
+    <div id="photo">
+        <img src="{{ src()}}" alt="photo de profil">
+    </div>
+    <div id="infos">
+        <p> <strong> {{name()}}</strong></p>
+        <p> Niveau : {{ niveau()}}</p>
+        <p> âge : {{ age()}}</p>
+        <p> lieu : {{ lieu()}}</p>
+        <p id="bio"> {{ bio()}}</p>
+        <div class="avis">
+            <span class="avis-titre">Avis :</span>
+            <span class="etoile">⭐</span>
+            <span class="note">{{ note()}}</span>
+            <span class="note-max">/ 5</span>
+            <span class="nb-avis">({{ nbNotes()}} notes)</span>
+        </div>
+        <button (click)="toggleAsk()" [ngClass]="hasAsked()">
+            @if(this.hasClickedOnButton){
+            {{name()}} a bien reçu une notification de votre part
+            }
+            @else {
+            Lui proposer de jouer ensemble
+            }
+
+        </button>
+    </div>
+
+</div>

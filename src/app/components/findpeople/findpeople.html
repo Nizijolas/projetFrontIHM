@@ -1,1 +1,23 @@
-<p>findpeople works!</p>
+@if(connexions.someoneIsLog){
+    <h2> Voici des joueurs autour de votre position : </h2>
+    @if(connexions.pseudoOfLog == "Laura"){
+        <app-people-card-find [src]="connexions.paulSrc()"
+        [age]="connexions.paulAge()" [bio]="connexions.paulBio()" [lieu]="connexions.paulLieu()"
+        [nbNotes]="connexions.paulNbNotes()" [note]="connexions.paulNote()" [niveau]="connexions.paulNiveau()"
+        [name]="'Paul'" >
+        </app-people-card-find>
+    }
+    @else {
+
+    }
+
+    @for( p of this.fakePlayers.fakePlayers ; track $index){
+        <app-people-card-find [src]="p.src" [age]="p.age" [bio]="p.bio"
+            [lieu]="p.lieu" [nbNotes]="p.nbNotes" [note]="p.note"
+            [niveau]="p.niveau" [name]="p.name">
+        </app-people-card-find>
+    }
+}
+@else{
+    <app-notconnected></app-notconnected>
+}

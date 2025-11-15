@@ -21,6 +21,7 @@
 
     #cadreProfil{
         flex-direction: column;
+        width: 90%;
     }
     
     #infos {
