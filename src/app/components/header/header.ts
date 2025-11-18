@@ -11,12 +11,13 @@ import { NgClass } from '@angular/common';
 export class Header {
   public connexions = inject(Connexions);
   public router = inject(Router);
-  showBurger: boolean = false;
+  showBurger = signal(false);
 
   processDeconnexion() {
     this.connexions.someoneIsLog = false;
     this.connexions.pseudoOfLog = "";
-    this.router.navigateByUrl('/');
+    this.connexions.messages = [];
+    this.navigate('/');
   }
 
   getUrl(): string {
@@ -24,11 +25,14 @@ export class Header {
   }
 
   toggleBurgerMenu(): void {
-    this.showBurger = !this.showBurger;
+    console.log(this.showBurger());
+    this.showBurger.set(!this.showBurger())
+    console.log(this.showBurger());
+
   }
 
-  navigate(path:string):void{
-    this.showBurger = false;
+  navigate(path: string): void {
+    this.showBurger.set(false);
     this.router.navigateByUrl(path);
   }
 

@@ -17,12 +17,20 @@
 }
 
 h3{
+    padding: 5px;
     margin-top: 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
     border-bottom: solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 #messageSender{
-    position: absolute;
+    position: sticky;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -31,6 +39,7 @@ h3{
 
 textarea {
     width: 80%;
+    resize: none;
 }
 
 #sendArrow {
@@ -47,4 +56,22 @@ textarea {
 
 #sendArrow:hover{
     cursor: pointer;
+}
+
+
+#photo{
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#photo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#listeMessages{
+    height: 80%;
+    overflow: scroll;
 }

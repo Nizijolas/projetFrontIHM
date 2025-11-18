@@ -20,9 +20,7 @@
     <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>
 }
-@if(this.connexions.someoneIsLog && this.showBurger)
-{
-<div id="menuDeroulant">
+<div id="menuDeroulant" [ngClass]="this.showBurger() ? 'activeBurger' : 'notActiveBurger'">
     <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" (click)="navigate('/trouverDesPersonnes')">
         Chercher
         des personnes</a>
@@ -30,4 +28,3 @@
     <a [ngClass]="getUrl() == '/userHome' ? 'active' : ''" (click)="navigate('/userHome')"> Mon profil </a>
     <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>
-}

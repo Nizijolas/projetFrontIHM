@@ -5,10 +5,9 @@
 @else{
 <div id="cadreMessages">
     <ul id="listeConversations">
+        <h3> Contacts </h3>
         @for( m of connexions.messages ; track $index ){
-        <li [ngClass]="this.actualPlayer().name == m.player?.name ? 'active':''"
-        
-        (click)="setNew(m.player?.name??'')">
+        <li [ngClass]="this.actualPlayer().name == m.player?.name ? 'active':''" (click)="setNew(m.player?.name??'')">
             {{ m.player?.name}}
         </li>
         }

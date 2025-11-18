@@ -26,6 +26,6 @@ export class Conversation {
     if ( message == "")
       return
     this.connexions.messages.find(m => m.player?.name == name)?.listeMessages.push(message);
-    
+    this.messageForm.setValue("");
   }
 }

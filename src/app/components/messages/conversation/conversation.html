@@ -1,13 +1,22 @@
-<h3> Conversation avec {{ player().name}}</h3>
-@for ( s of this.getMessages(); track $index){
-<div class="message">
-    vous : {{ s }}
+<h3> Conversation avec {{ player().name}} <div id="photo"> <img src="{{this.player().src}}" alt=""></div>
+</h3>
+<div id="listeMessages">
+
+    @for ( message of this.getMessages(); track $index){
+    <div class="message">
+        vous : {{ message }}
+    </div>
+    }
+
 </div>
-}
 <div id="messageSender">
-    <textarea id="bio" name="bio" rows="5" placeholder="écrire un message..." [formControl]="messageForm">
+    <textarea (keydown.enter)="addMessage()" rows="5" placeholder="écrire un message..." [formControl]="messageForm">
     </textarea>
     <div id="sendArrow" (click)="addMessage()">
         <img src="send.png" alt="bouton d'envoi">
     </div>
+</div>
+
+<div id="conversation">
+
 </div>
