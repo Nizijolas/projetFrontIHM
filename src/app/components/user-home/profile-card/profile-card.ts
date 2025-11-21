@@ -1,10 +1,9 @@
 import { Component, inject, input, signal } from '@angular/core';
-import { Editionmenu } from '../editionmenu/editionmenu';
 import { Router } from '@angular/router';
 import { Connexions } from '../../../services/connexions';
 @Component({
   selector: 'app-profile-card',
-  imports: [Editionmenu],
+  imports: [],
   templateUrl: './profile-card.html',
   styleUrl: './profile-card.css',
 })
