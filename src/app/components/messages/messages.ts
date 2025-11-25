@@ -5,9 +5,10 @@ import { Conversation } from "./conversation/conversation";
 import { PlayerInfo } from '../../model/player-info';
 import { OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-messages',
-  imports: [Notconnected, Conversation, NgClass],
+  imports: [Notconnected, Conversation, NgClass, RouterLink],
   templateUrl: './messages.html',
   styleUrl: './messages.css',
 })

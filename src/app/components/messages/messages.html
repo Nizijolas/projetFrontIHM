@@ -1,6 +1,6 @@
 @if( connexions.someoneIsLog){
 @if( connexions.messages.length == 0){
-<p> Vous n'avez aucune conversation en cours rendez vous dans la section chercher des personnes</p>
+<p id="noMessages"> Vous n'avez aucune conversation en cours rendez vous dans la section <a routerLink="/trouverDesPersonnes"> Chercher des personnes</a></p>
 }
 @else{
 <div id="cadreMessages">

@@ -46,3 +46,14 @@ h3 {
 }
 
 
+#noMessages{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+#noMessages > a {
+    color: #3385a0;
+}

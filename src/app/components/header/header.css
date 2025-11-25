@@ -112,3 +112,14 @@ a:hover {
 .notActiveBurger{
     display: none;
 }
+
+#croix{
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px
+}
+
+#croix:hover{
+    cursor: pointer;
+}

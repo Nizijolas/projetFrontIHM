@@ -17,7 +17,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 630px){
+@media screen and (max-width: 650px){
 
     #cadreProfil{
         flex-direction: column;

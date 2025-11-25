@@ -21,6 +21,7 @@
 </div>
 }
 <div id="menuDeroulant" [ngClass]="this.showBurger() ? 'activeBurger' : 'notActiveBurger'">
+    <img id="croix" (click)="toggleBurgerMenu()" src="cross.svg" alt="croix pour fermer">
     <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" (click)="navigate('/trouverDesPersonnes')">
         Chercher
         des personnes</a>
