@@ -9,14 +9,13 @@ import { PlayerInfo } from '../model/player-info';
 export class Connexions {
   public paul: string[] = ["Paul", "azerty"];
   public laura: string[] = ["Laura", "azerty"];
-
   public messages: Message[] = [];
   public fakePlayers = inject(FakePlayer);
 
   findAndAddMessage(name: string) {
-    if (this.messages.find(m => m.player?.name == name) == undefined){
-      let myPlayer:PlayerInfo = this.fakePlayers.findByName(name)?? PlayerInfo.undefined;
-      if ( myPlayer.name == "undefined")
+    if (this.messages.find(m => m.player?.name == name) == undefined) {
+      let myPlayer: PlayerInfo = this.fakePlayers.findByName(name) ?? PlayerInfo.undefined;
+      if (myPlayer.name == "undefined")
         return;
       this.messages.push(new Message(name, myPlayer))
 
