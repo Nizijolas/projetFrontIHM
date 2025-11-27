@@ -1,11 +1,63 @@
 @if(this.connexions.someoneIsLog){
-    <h3> Partager les scores de votre dernière partie : </h3>
 
-    <h3> Vos dernières parties ? </h3>
-    <app-display-scores [parties]="this.fakeParties.fakeparties">
+    <button id="ajouterPartie"(click)="toggleShowAddPartie()"> {{ showAddPartie() ? "Annuler ✗" : "Ajouter une partie " }} </button>
+<form [formGroup]="nouvellePartieForm" (ngSubmit)="onSubmit()" [class.notActive]="!showAddPartie()">
+    <label for="nomAdversaire">Nom de votre opposant :</label>
+    <input type="text" formControlName="nomAdversaire" placeholder="Nom de l'aversaire...">
 
-    </app-display-scores>
+    <div class="set">
+        <h3>Premier set :</h3>
+        <div class="set-scores">
+            <div>
+                <label for="monScoreSet1">Votre Score</label>
+                <input type="number" formControlName="monScoreSet1">
+            </div>
+            <div>
+                <label for="sonScoreSet1">Score adversaire</label>
+                <input type="number" formControlName="sonScoreSet1">
+            </div>
+        </div>
+    </div>
+
+    <div class="set">
+        <h3>Deuxième set :</h3>
+        <div class="set-scores">
+            <div>
+                <label for="monScoreSet2">Votre Score</label>
+                <input type="number" formControlName="monScoreSet2">
+            </div>
+            <div>
+                <label for="sonScoreSet2">Score adversaire</label>
+                <input type="number" formControlName="sonScoreSet2">
+            </div>
+        </div>
+    </div>
+
+    <div class="set">
+        <h3>Troisième set :</h3>
+        <div class="set-scores">
+            <div>
+                <label for="monScoreSet3">Votre Score</label>
+                <input type="number" formControlName="monScoreSet3">
+            </div>
+            <div>
+                <label for="sonScoreSet3">Score adversaire</label>
+                <input type="number" formControlName="sonScoreSet3">
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!nouvellePartieForm.valid">Enregistrer cette partie</button>
+</form>
+
+
+
+
+
+<app-display-scores [parties]="this.fakeParties.fakeparties">
+
+</app-display-scores>
 }
 @else {
-    <app-notconnected></app-notconnected>
+<app-notconnected></app-notconnected>
 }

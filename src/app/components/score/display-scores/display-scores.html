@@ -1,13 +1,27 @@
-@for (partie of parties(); track $index) {
-    <div id="partie">
-    <h2> Partie contre {{ partie.adversaire.name }} </h2>
-
-    @for ( set of partie.sets ; track $index){
-        <div id="set">
-        <h3> {{ set.won() ? "Win" : "Loose"}}</h3>
-        <p> {{ set.myPoints }} </p>
-        <p> {{ set.advPoints}}</p>
+<div class="parties-container">
+    @for (partie of parties(); track $index) {
+    <div class="partie-card">
+        <div class="partie-header">
+            <h2 class="partie-title">Partie contre {{ partie.adversaire }}</h2>
+            <span class="partie-status" [class.win]="partie.won()" [class.loose]="!partie.won()">
+                {{ partie.won() ? '✓ Victoire' : '✗ Défaite' }}
+            </span>
         </div>
-    }
+        <div class="sets-grid">
+            @for (set of partie.sets; track $index) {
+            <div class="set-result" [class.win]="set.won()" [class.loose]="!set.won()">
+                <div class="set-header">
+                    <span class="set-number">Set {{ $index + 1 }}</span>
+                    <span class="set-status">{{ set.won() ? "Victoire" : "Défaite" }}</span>
+                </div>
+                <div class="set-score">
+                    <span class="my-score">{{ set.myPoints }}</span>
+                    <span class="separator">-</span>
+                    <span class="adv-score">{{ set.advPoints }}</span>
+                </div>
+            </div>
+            }
+        </div>
     </div>
-}
+    }
+</div>
