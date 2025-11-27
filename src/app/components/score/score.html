@@ -1,7 +1,10 @@
 @if(this.connexions.someoneIsLog){
     <h3> Partager les scores de votre dernière partie : </h3>
 
-    <h3> Vos dernirès parties ? </h3>
+    <h3> Vos dernières parties ? </h3>
+    <app-display-scores [parties]="this.fakeParties.fakeparties">
+
+    </app-display-scores>
 }
 @else {
     <app-notconnected></app-notconnected>

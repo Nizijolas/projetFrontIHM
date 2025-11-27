@@ -17,6 +17,7 @@
         des personnes</a>
     <a [ngClass]="getUrl() == '/messages' ? 'active' : ''" routerLink="/messages"> Messages </a>
     <a [ngClass]="getUrl() == '/userHome' ? 'active' : ''" routerLink="/userHome"> Mon profil </a>
+    <a [ngClass]="getUrl() == '/score' ? 'active' : ''" routerLink="/score"> Mes Scores </a>
     <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>
 }
@@ -27,5 +28,6 @@
         des personnes</a>
     <a [ngClass]="getUrl() == '/messages' ? 'active' : ''" (click)="navigate('/messages')"> Messages </a>
     <a [ngClass]="getUrl() == '/userHome' ? 'active' : ''" (click)="navigate('/userHome')"> Mon profil </a>
+    <a [ngClass]="getUrl() == '/score' ? 'active' : ''" routerLink="/score"> Mes Scores </a>
     <a id="logOut" (click)="processDeconnexion()"> déconnexion </a>
 </div>

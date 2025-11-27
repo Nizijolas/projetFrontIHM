@@ -1,0 +1,13 @@
+@for (partie of parties(); track $index) {
+    <div id="partie">
+    <h2> Partie contre {{ partie.adversaire.name }} </h2>
+
+    @for ( set of partie.sets ; track $index){
+        <div id="set">
+        <h3> {{ set.won() ? "Win" : "Loose"}}</h3>
+        <p> {{ set.myPoints }} </p>
+        <p> {{ set.advPoints}}</p>
+        </div>
+    }
+    </div>
+}

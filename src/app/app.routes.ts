@@ -4,6 +4,7 @@ import { UserHome } from './components/user-home/user-home';
 import { Editionmenu } from './components/user-home/editionmenu/editionmenu';
 import { Findpeople } from './components/findpeople/findpeople';
 import { Messages } from './components/messages/messages';
+import { Score } from './components/score/score';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,8 @@ export const routes: Routes = [
     {
         path: 'messages',
         component:Messages
+    },{
+        path:'score',
+        component:Score
     }
 ];

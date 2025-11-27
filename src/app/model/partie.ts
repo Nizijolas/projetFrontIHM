@@ -2,9 +2,9 @@ import { PlayerInfo } from "./player-info";
 import { SetPing } from "./set-ping";
 
 export class Partie {
-    resultat: string;
-    adversaire: PlayerInfo;
-    sets: SetPing[];
+    public resultat: string;
+    public adversaire: PlayerInfo;
+    public sets: SetPing[];
 
     constructor(resultat: string, set1: SetPing, set2: SetPing, set3: SetPing, adversaire: PlayerInfo) {
         if (resultat != "gagné" && resultat != "perdu")
