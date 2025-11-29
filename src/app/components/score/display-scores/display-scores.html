@@ -1,4 +1,10 @@
 <div class="parties-container">
+    @if (closer()) {
+    <img id="croix" (click)="close.emit()" src="cross.svg" alt="croix pour fermer">
+    }
+    @if (name() != "personnal"){
+    <h3> Historique des parties de {{ name()}}</h3>
+    }
     @for (partie of parties(); track $index) {
     <div class="partie-card">
         <div class="partie-header">

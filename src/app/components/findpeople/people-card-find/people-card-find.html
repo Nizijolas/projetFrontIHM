@@ -15,9 +15,10 @@
             <span class="note-max">/ 5</span>
             <span class="nb-avis">({{ nbNotes()}} notes)</span>
         </div>
+        <button id="voirParties" (click)="this.showParties.emit(name())"> Voir les parties récentes </button>
         <button (click)="toggleAsk(name())" [ngClass]="hasAsked()">
             @if(this.hasClickedOnButton){
-            {{name()}} a bien reçu une notification de votre part
+            {{name()}} a bien reçu une notification de votre part : <div id="messages" (click)="this.navigate.emit('/messages')"> consultez vos messages </div>
             }
             @else {
             Lui proposer de jouer ensemble

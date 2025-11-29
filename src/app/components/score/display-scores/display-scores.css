@@ -2,6 +2,13 @@
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
+    position: relative;
+}
+
+h3{
+    color: white;
+    padding: 30px;
+    font-weight: bold;
 }
 
 .partie-card {
@@ -191,4 +198,16 @@
         font-size: 0.85rem;
         padding: 0.35rem 0.8rem;
     }
+}
+#croix {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    
+}
+
+#croix:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
 }

@@ -9,7 +9,8 @@ import { Connexions } from '../../../services/connexions';
   styleUrl: './people-card-find.css',
 })
 export class PeopleCardFind implements OnInit{
- 
+  
+  showParties = output<string>();
   src = input.required<string>();
   niveau = input.required<string>();
   age = input.required<number>();
@@ -22,6 +23,7 @@ export class PeopleCardFind implements OnInit{
   
   createMessage = output<string>();
   connexions = inject(Connexions);
+  navigate = output<string>();
   
 
   

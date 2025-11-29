@@ -1,9 +1,15 @@
 @if(isConnected()){
-    <h2> Bienvenue {{ getPseudo()}}</h2>
-    <p> Ce que les autres voient : </p>
-    <app-profile-card></app-profile-card>
+<h2> Bienvenue {{ getPseudo()}}</h2>
+<p> Ce que les autres voient : </p>
+<app-profile-card (showParties)="toggleModalParties()"></app-profile-card>
+@if(showParties()){
+<div id="partie">
+    <app-display-scores [name]="getPseudo()" [parties]="this.fakeParties.fakeparties"
+        [closer]="true" (close)="toggleModalParties()" >
+    </app-display-scores>
+</div>
+}
 }
 @else {
- <app-notconnected></app-notconnected>
+<app-notconnected></app-notconnected>
 }
-

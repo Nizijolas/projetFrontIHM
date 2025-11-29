@@ -127,7 +127,24 @@
     margin-left: 0.25rem;
 }
 
+#voirParties {
+    margin: auto;
+    padding: 5;
+    background-color: rgb(163, 215, 247);
+    width: 100%;
+    font-size: medium;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#voirParties:hover {
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+
 .ask {
+    width: 100%;
     margin: auto;
     padding: 10px;
     background-color: lightskyblue;
@@ -141,10 +158,24 @@
     color: white;
 }
 
-.notify{
-margin: auto;
+.notify {
+    margin: auto;
+    width: 100%;
     padding: 10px;
-    background-color:   lightgreen;
+    background-color: lightgreen;
     border: solid 1px darkolivegreen;
-    font-weight: bold;
+}
+
+#messages {
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgb(120, 197, 120);
+    border: solid 1px darkolivegreen;
+    width: fit-content;
+    margin: auto;
+}
+
+#messages:hover {
+    cursor: pointer;
+    color: white
 }

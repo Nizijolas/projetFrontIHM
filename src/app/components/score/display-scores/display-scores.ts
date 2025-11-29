@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Partie } from '../../../model/partie';
 @Component({
   selector: 'app-display-scores',
@@ -7,5 +7,8 @@ import { Partie } from '../../../model/partie';
   styleUrl: './display-scores.css',
 })
 export class DisplayScores {
+  close = output<void>();
   parties = input.required<Partie[]>();
+  name = input.required<string>();
+  closer = input.required<boolean>();
 }

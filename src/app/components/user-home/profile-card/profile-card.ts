@@ -1,4 +1,4 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { Connexions } from '../../../services/connexions';
 @Component({
@@ -10,7 +10,7 @@ import { Connexions } from '../../../services/connexions';
 export class ProfileCard {
   router = inject(Router);
   connexions = inject(Connexions);
-
+  showParties = output<void>();
 
 
 

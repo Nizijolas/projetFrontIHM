@@ -1,6 +1,7 @@
 @if(this.connexions.someoneIsLog){
 
-    <button id="ajouterPartie"(click)="toggleShowAddPartie()"> {{ showAddPartie() ? "Annuler ✗" : "Ajouter une partie " }} </button>
+<button id="ajouterPartie" (click)="toggleShowAddPartie()"> {{ showAddPartie() ? "Annuler ✗" : "Ajouter une partie " }}
+</button>
 <form [formGroup]="nouvellePartieForm" (ngSubmit)="onSubmit()" [class.notActive]="!showAddPartie()">
     <label for="nomAdversaire">Nom de votre opposant :</label>
     <input type="text" formControlName="nomAdversaire" placeholder="Nom de l'aversaire...">
@@ -48,13 +49,17 @@
     </div>
 
     <button type="submit" [disabled]="!nouvellePartieForm.valid">Enregistrer cette partie</button>
+    @if ( showError()){
+    <app-error (close)="toggleShowError()"> Pas d'égalité possible entre les Sets et le gagnant doit avoir au moins 11
+        points </app-error>
+    }
 </form>
 
 
 
 
 
-<app-display-scores [parties]="this.fakeParties.fakeparties">
+<app-display-scores [name]="'personnal'" [parties]="this.fakeParties.fakeparties" [closer]="false">
 
 </app-display-scores>
 }

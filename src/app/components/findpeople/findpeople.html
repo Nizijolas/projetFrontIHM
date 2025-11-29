@@ -1,10 +1,17 @@
 @if(connexions.someoneIsLog){
     <h2> Voici des joueurs autour de votre position : </h2>
     @for( p of this.fakePlayers.fakePlayers ; track $index){
-        <app-people-card-find (createMessage)="createMessage($event)" [src]="p.src" [age]="p.age" [bio]="p.bio"
+        <app-people-card-find (showParties)="toggleModalParties($event)" (createMessage)="createMessage($event)" [src]="p.src" [age]="p.age" [bio]="p.bio"
             [lieu]="p.lieu" [nbNotes]="p.nbNotes" [note]="p.note"
-            [niveau]="p.niveau" [name]="p.name">
+            [niveau]="p.niveau" [name]="p.name" (navigate)="this.navigate($event)">
         </app-people-card-find>
+    }
+
+    @if(showParties()){
+        <div id="partie">
+            <app-display-scores [name]="this.nameForParties()" [parties]="this.fakeParties.fakepartiesForFakePlayers" [closer]="true" (close)="toggleModalParties('unset')">
+            </app-display-scores>
+       </div>
     }
 }
 @else{
