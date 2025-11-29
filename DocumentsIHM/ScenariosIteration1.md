@@ -2,65 +2,99 @@
 
 Ce document décrit deux scénarios de test basés sur les personas Paul et Laura, conçus pour valider les fonctionnalités clés de l'application tout en respectant les principes d'Interaction Homme-Machine (IHM).
 
-## Scénario 1 : Paul
+## Scénario 1 : Paul - Connexion et Accueil
 
-**Objectif :** Découvrir de nouveaux contacts et initier une interaction significative.
+**Objectif :** Accéder à l'application et valider l'état initial.
 
-### Contexte du Persona
+### Contexte
+Paul lance l'application pour la première fois de la journée.
 
-Paul est un utilisateur sociable qui cherche à élargir son réseau. Il n'est pas expert en technologie, il a donc besoin d'une interface intuitive avec un feedback clair pour se sentir en confiance.
-
-### Étapes du Scénario
-
-| Étape | Action Utilisateur                                                                                              | Réponse Attendue du Système                                                                                                         | Principe IHM                                                                                                      |
-| :---- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| 1     | Saisir le login "Paul" et le mot de passe "azerty" sur la page de connexion, puis valider.                      | Redirection vers la page d'accueil utilisateur (`UserHome`). Le menu de navigation est visible.                                     | **Visibilité de l'état du système** : L'utilisateur sait qu'il est connecté.                                      |
-| 2     | Cliquer sur l'onglet/lien "Trouver des personnes" (`Findpeople`).                                               | Affichage de la liste des cartes de profils (`PeopleCardFind`). Chaque carte affiche clairement le nom et une option d'interaction. | **Reconnaissance plutôt que rappel** : Les options sont visibles, Paul n'a pas à se souvenir comment chercher.    |
-| 3     | Identifier un profil intéressant et cliquer sur le bouton pour envoyer un message (simulé par `createMessage`). | Le système doit confirmer l'action (ex: ajout à la liste des messages ou notification visuelle).                                    | **Feedback** : Le système informe l'utilisateur que son action a eu un effet.                                     |
-| 4     | Naviguer vers la page "Messages".                                                                               | La nouvelle conversation avec le profil sélectionné doit apparaître dans la liste.                                                  | **Cohérence** : Les actions dans une partie de l'app se reflètent logiquement ailleurs.                           |
-| 5     | Sélectionner la conversation.                                                                                   | L'historique (même vide ou initial) s'affiche, avec le nom du contact bien visible (`actualPlayer`).                                | **Esthétique et design minimaliste** : Seules les informations pertinentes pour la tâche en cours sont affichées. |
+### Étapes
+| Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
+| :---- | :----------------- | :-------------------------- | :----------- |
+| 1 | Saisir le login "Paul" et le mot de passe "azerty" sur la page de connexion, puis valider. | Redirection vers la page d'accueil utilisateur (`UserHome`). Le menu de navigation est visible. | **Visibilité de l'état du système** : L'utilisateur sait qu'il est connecté. |
 
 ### Critères de Succès
-
-- La connexion est fluide.
-- La navigation vers "Trouver des personnes" est immédiate.
-- L'ajout d'un contact via un message initialise correctement la conversation.
+- La connexion est fluide et redirige vers la bonne page.
 
 ---
 
-## Scénario 2 : Laura
+## Scénario 2 : Paul - Recherche de nouveaux contacts
 
-**Objectif :** Gérer efficacement plusieurs conversations actives et accéder rapidement aux informations.
+**Objectif :** Découvrir des profils intéressants sans effort de mémorisation.
 
-### Contexte du Persona
+### Contexte
+Paul est connecté et souhaite élargir son réseau.
 
-Laura est une utilisatrice organisée et pressée. Elle utilise l'application pour des communications précises. Elle valorise l'efficacité et la rapidité d'exécution.
-
-### Pré-conditions
-
-- Laura est connectée (Login: "Laura", Mdp: "azerty").
-- Laura a déjà plusieurs conversations en cours (historique existant dans `Connexions`).
-
-### Étapes du Scénario
-
-| Étape | Action Utilisateur                                                                                                       | Réponse Attendue du Système                                                                                                                          | Principe IHM                                                                                                        |
-| :---- | :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| 1     | Accéder directement à la page "Messages" depuis le menu principal.                                                       | La liste des conversations s'affiche à gauche, la conversation active à droite. Le dernier message est visible.                                      | **Flexibilité et efficience** : Accès direct à la fonction principale sans étapes superflues.                       |
-| 2     | Observer la liste des contacts. Cliquer sur un contact différent de celui actif (utilisation de `setNew`).               | La vue principale se met à jour instantanément pour afficher les détails et messages du nouveau contact sélectionné (`actualPlayer` est mis à jour). | **Contrôle utilisateur** : L'utilisateur navigue librement entre les contextes sans contrainte.                     |
-| 3     | Vérifier les détails du contact affiché (Nom, Statut).                                                                   | Les informations correspondent exactement au contact sélectionné dans la liste.                                                                      | **Correspondance avec le monde réel** : L'organisation des dossiers/messages imite une boîte de réception standard. |
-| 4     | Tenter d'envoyer une réponse rapide (si fonctionnalité disponible) ou changer à nouveau de conversation très rapidement. | L'interface reste réactive, pas de lag. La sélection visuelle (surbrillance) suit immédiatement le clic.                                             | **Prévention des erreurs** : Une interface réactive évite les clics erronés sur le mauvais destinataire.            |
-| 5     | Se déconnecter via le bouton de profil ou menu.                                                                          | Retour à la page de login. Les données de session sont nettoyées.                                                                                    | **Sortie d'urgence** : L'utilisateur peut quitter l'état connecté à tout moment.                                    |
+### Étapes
+| Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
+| :---- | :----------------- | :-------------------------- | :----------- |
+| 1 | Cliquer sur l'onglet/lien "Trouver des personnes" (`Findpeople`). | Affichage de la liste des cartes de profils (`PeopleCardFind`). Chaque carte affiche clairement le nom et une option d'interaction. | **Reconnaissance plutôt que rappel** : Les options sont visibles, Paul n'a pas à se souvenir comment chercher. |
 
 ### Critères de Succès
-
-- Le changement de conversation est instantané (mise à jour du signal `actualPlayer`).
-- L'interface distingue clairement la conversation active des autres.
-- Aucune confusion sur l'identité du destinataire affiché.
+- La liste des profils se charge correctement.
+- Les options d'interaction sont évidentes.
 
 ---
+
+## Scénario 3 : Paul - Initialisation d'une conversation
+
+**Objectif :** Engager le dialogue avec un nouveau contact et vérifier la continuité.
+
+### Contexte
+Paul a identifié un profil qui l'intéresse dans la liste.
+
+### Étapes
+| Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
+| :---- | :----------------- | :-------------------------- | :----------- |
+| 1 | Identifier un profil et cliquer sur le bouton pour envoyer un message (`createMessage`). | Le système confirme l'action (feedback visuel). | **Feedback** : Le système informe l'utilisateur que son action a eu un effet. |
+| 2 | Naviguer vers la page "Messages". | La nouvelle conversation apparaît dans la liste. | **Cohérence** : Les actions se reflètent logiquement ailleurs. |
+| 3 | Sélectionner la conversation. | L'historique (vide/initial) s'affiche avec le nom du contact. | **Esthétique et design minimaliste** : Focus sur la tâche en cours. |
+
+### Critères de Succès
+- Feedback immédiat après l'envoi.
+- La conversation est créée et accessible.
+
+---
+
+## Scénario 4 : Laura - Gestion des conversations actives
+
+**Objectif :** Naviguer efficacement entre plusieurs discussions parallèles.
+
+### Contexte
+Laura est connectée et a plusieurs conversations en cours. Elle est pressée.
+
+### Étapes
+| Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
+| :---- | :----------------- | :-------------------------- | :----------- |
+| 1 | Accéder à la page "Messages". | Liste des conversations à gauche, active à droite. | **Flexibilité et efficience** : Accès direct. |
+| 2 | Cliquer sur un contact différent de celui actif (`setNew`). | La vue principale se met à jour instantanément (`actualPlayer` mis à jour). | **Contrôle utilisateur** : Navigation libre. |
+| 3 | Vérifier les détails (Nom, Statut). | Les infos correspondent au contact sélectionné. | **Correspondance avec le monde réel** : Comme une boîte mail. |
+
+### Critères de Succès
+- Changement de conversation instantané.
+- Pas de confusion sur le destinataire actif.
+
+---
+
+## Scénario 5 : Laura - Déconnexion sécurisée
+
+**Objectif :** Quitter l'application proprement.
+
+### Contexte
+Laura a fini ses échanges et souhaite fermer sa session.
+
+### Étapes
+| Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
+| :---- | :----------------- | :-------------------------- | :----------- |
+| 1 | Se déconnecter via le bouton de profil ou menu. | Retour à la page de login. Session nettoyée. | **Sortie d'urgence** : Quitter l'état connecté à tout moment. |
+
+### Critères de Succès
+- Retour immédiat à l'écran de connexion.
 
 ## Références IHM
 
 Les principes cités dans ces scénarios sont basés sur les **10 Heuristiques d'Usabilité de Jakob Nielsen**.
 
 - **Source Principale** : [Jakob Nielsen's 10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
+
