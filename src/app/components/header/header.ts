@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 import { Connexions } from '../../services/connexions';
 import { Router, RouterLink } from "@angular/router";
 import { NgClass } from '@angular/common';
@@ -25,9 +25,7 @@ export class Header {
   }
 
   toggleBurgerMenu(): void {
-    console.log(this.showBurger());
     this.showBurger.set(!this.showBurger())
-    console.log(this.showBurger());
 
   }
 
@@ -35,5 +33,14 @@ export class Header {
     this.showBurger.set(false);
     this.router.navigateByUrl(path);
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    console.log("heeyyayra");
+    this.showBurger.set(false);
+  }
+
+
+
 
 }
