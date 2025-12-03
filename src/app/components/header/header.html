@@ -12,7 +12,6 @@
 @if (this.connexions.someoneIsLog) {
 
 <div id="navDesktop">
-
     <a [ngClass]="getUrl() == '/trouverDesPersonnes' ? 'active' : ''" routerLink="/trouverDesPersonnes"> Chercher
         des personnes</a>
     <a [ngClass]="getUrl() == '/messages' ? 'active' : ''" routerLink="/messages"> Messages </a>

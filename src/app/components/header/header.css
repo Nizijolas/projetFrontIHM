@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding:5px;
 }
 
 #cadreLogo {
@@ -28,11 +29,12 @@
 
 #navDesktop {
     border-top: solid 1px;
-    padding: 20px 0;
+    padding: 10px;
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    gap:50px;
     align-items: center;
-    width: 60%;
+    width: 90%;
 }
 
 
