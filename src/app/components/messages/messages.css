@@ -1,20 +1,20 @@
-#cadreMessages{
+#cadreMessages {
     display: flex;
     justify-content: flex-start;
     margin: auto;
     margin-top: 30px;
     width: 95%;
     height: 650px;
-    border: solid 1px;
     border-radius: 10px;
     padding: 0;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgb(126, 126, 126);
 }
 
 ul {
     display: block;
     text-align: center;
-    border-right: solid 1px;
+    border-right: solid 1px rgb(126, 126, 126);
     height: 100%;
     width: 20%;
     margin: 0;
@@ -24,29 +24,31 @@ ul {
 }
 
 li {
-    border-bottom: solid 1px black;
+    border-right: solid 1px rgb(126, 126, 126);
 }
 
-li:hover{
+li:hover {
     cursor: pointer;
 }
 
-app-conversation{
+app-conversation {
     margin: 0;
 }
 
-.active{
+.active {
     background-color: #add8e6;
 }
 
 h3 {
     margin: 0 auto;
     font-size: medium;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px rgb(107, 106, 106);
+    padding: 10px 0;
+    background-color:
 }
 
 
-#noMessages{
+#noMessages {
     width: 60%;
     margin: auto;
     margin-top: 100px;
@@ -54,6 +56,6 @@ h3 {
     font-weight: 600;
 }
 
-#noMessages > a {
+#noMessages>a {
     color: #3385a0;
 }

@@ -5,20 +5,21 @@
 
 #cadreProfil {
     width: 70%;
+    max-width: 990px;
     height: 70%;
     display: flex;
     justify-content: center;
-    gap: 15%;
+    gap: 5%;
     align-items: center;
     margin: auto;
-    border: solid 1px;
     border-radius: 10px;
     position: relative;
     padding: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 700px) {
 
     #cadreProfil {
         flex-direction: column;
@@ -48,7 +49,7 @@
 }
 
 #infos {
-    width: 50%;
+    width: 60%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -133,7 +134,7 @@
     background-color: rgb(163, 215, 247);
     width: 100%;
     font-size: medium;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
 }
 
@@ -148,8 +149,9 @@
     margin: auto;
     padding: 10px;
     background-color: lightskyblue;
-    border: solid 1px darkblue;
     font-weight: bold;
+    border-radius: 5px;
+    border: none;
 }
 
 .ask:hover {
@@ -163,14 +165,15 @@
     width: 100%;
     padding: 10px;
     background-color: lightgreen;
-    border: solid 1px darkolivegreen;
+    border: none;
+    border-radius: 5px;
 }
 
 #messages {
     padding: 3px;
     border-radius: 5px;
     background-color: rgb(120, 197, 120);
-    border: solid 1px darkolivegreen;
+    border:  none;
     width: fit-content;
     margin: auto;
 }
