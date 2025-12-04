@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding:5px;
+    padding: 5px;
 }
 
 #cadreLogo {
@@ -28,28 +28,34 @@
 }
 
 #navDesktop {
-    border-top: solid 1px;
     padding: 10px;
     display: flex;
     justify-content: center;
-    gap:50px;
+    gap: 50px;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 
 a {
     text-decoration: none;
     color: black;
-    padding: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 a:hover {
     cursor: pointer;
+    background-color: rgb(66, 140, 165);
+    color: white;
 }
 
 #logOut {
     color: gray
+}
+
+#logOut:hover {
+    color: white;
 }
 
 #center {
@@ -58,7 +64,9 @@ a:hover {
 }
 
 .active {
-    border-bottom: 1px solid;
+    background-color: rgb(66, 140, 165);
+    text-decoration: underline;
+    color: white;
 }
 
 #navMobile {
@@ -88,7 +96,7 @@ a:hover {
     }
 
 
-    .activeBurger{
+    .activeBurger {
         display: flex;
     }
 
@@ -106,22 +114,35 @@ a:hover {
 }
 
 #menuDeroulant>a {
-    padding: 30px;
+    padding: 15px;
     width: 50%;
-    margin: auto;
+    margin: 15px auto;
 }
 
-.notActiveBurger{
+#menuDeroulant>a:hover {
+    color: white;
+    padding: 15px;
+    width: 50%;
+    margin: 15px auto;
+}
+
+#menuDeroulant > .active {
+    text-decoration: underline;
+    color: white;
+}
+
+
+.notActiveBurger {
     display: none;
 }
 
-#croix{
+#croix {
     width: 30px;
     position: absolute;
     right: 5px;
     top: 5px
 }
 
-#croix:hover{
+#croix:hover {
     cursor: pointer;
 }
