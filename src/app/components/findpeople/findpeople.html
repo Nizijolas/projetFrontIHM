@@ -1,5 +1,5 @@
 @if(connexions.someoneIsLog){
-    <h2> Voici des joueurs autour de votre position : </h2>
+    <h3> Voici des joueurs autour de votre position : </h3>
     @for( p of this.fakePlayers.fakePlayers ; track $index){
         <app-people-card-find (showParties)="toggleModalParties($event)" (createMessage)="createMessage($event)" [src]="p.src" [age]="p.age" [bio]="p.bio"
             [lieu]="p.lieu" [nbNotes]="p.nbNotes" [note]="p.note"
