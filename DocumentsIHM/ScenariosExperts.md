@@ -4,7 +4,7 @@ Ce document décrit cinq scénarios de test basés sur les personas Paul et Laur
 
 > **Note importante :** Dans chaque scénario, seule la section **Contexte** doit être présentée à l'utilisateur lors des tests. La section **Étapes** est destinée uniquement à l'observateur pour évaluer le succès du test et le respect des principes IHM.
 
-## Scénario 1 : Paul - Connexion et Accueil
+## Scénario 1 : Paul - Retour sur le terrain
 
 **Objectif :** Accéder à l'application et valider l'état initial.
 
@@ -22,7 +22,7 @@ Paul lance l'application pour la première fois de la journée.
 
 ---
 
-## Scénario 2 : Paul - Recherche de nouveaux contacts
+## Scénario 2 : Paul - À la recherche de nouveaux adversaires
 
 **Objectif :** Découvrir des profils intéressants sans effort de mémorisation.
 
@@ -41,7 +41,7 @@ Paul est connecté et souhaite élargir son réseau.
 
 ---
 
-## Scénario 3 : Paul - Initialisation d'une conversation
+## Scénario 3 : Paul - L'invitation au duel
 
 **Objectif :** Engager le dialogue avec un nouveau contact et vérifier la continuité.
 
@@ -62,7 +62,7 @@ Paul a identifié un profil qui l'intéresse dans la liste.
 
 ---
 
-## Scénario 4 : Laura - Gestion des conversations actives
+## Scénario 4 : Laura - Organisation du tournoi
 
 **Objectif :** Naviguer efficacement entre plusieurs discussions parallèles.
 
@@ -83,7 +83,7 @@ Laura est connectée et a plusieurs conversations en cours. Elle est pressée.
 
 ---
 
-## Scénario 5 : Laura - Déconnexion sécurisée
+## Scénario 5 : Laura - Pause bien méritée
 
 **Objectif :** Quitter l'application proprement.
 
