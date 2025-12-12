@@ -19,9 +19,8 @@ ng serve
 Une fois le serveur lancé vous pouvez vous rendre sur l'adresse : `http://localhost:4200/`.
 
 **Vous arriverez sur une page de login, pour vous connecter il faut utiliser les pseudos/mdp d'un des deux Personnas (cf scénarios).**
-Rappel
-Pseudos : `Laura` ou `Paul` ( avec la majuscule au début )
-Mdp : `azerty` ( pour les deux ). 
+  Pseudos : `Laura` ou `Paul` ( avec la majuscule au début ).  
+  Mdp : `azerty` ( pour les deux ). 
 
 ## Documentation IHM.
 
