@@ -99,6 +99,7 @@ L'application est structurée en composants modulaires :
     *   Cahier des Charges (ce document).
     *   Scénarios de Test (Fichiers Markdown).
     *   Personas (Fichiers PDF).
+    *   Partie front de l'application avec angular. 
 
 ---
 

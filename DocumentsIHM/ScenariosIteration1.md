@@ -1,15 +1,18 @@
 # Scénarios de Test Complexes - IHM
 
-Ce document décrit deux scénarios de test basés sur les personas Paul et Laura, conçus pour valider les fonctionnalités clés de l'application tout en respectant les principes d'Interaction Homme-Machine (IHM).
+Ce document décrit cinq scénarios de test basés sur les personas Paul et Laura, conçus pour valider les fonctionnalités clés de l'application tout en respectant les principes d'Interaction Homme-Machine (IHM).
+
+> **Note importante :** Dans chaque scénario, seule la section **Contexte** doit être présentée à l'utilisateur lors des tests. La section **Étapes** est destinée uniquement à l'observateur pour évaluer le succès du test et le respect des principes IHM.
 
 ## Scénario 1 : Paul - Connexion et Accueil
 
 **Objectif :** Accéder à l'application et valider l'état initial.
 
-### Contexte
+### Contexte (Information présentée à l'utilisateur)
 Paul lance l'application pour la première fois de la journée.
 
-### Étapes
+### Étapes d'Évaluation (Usage interne uniquement)
+> **Note :** Ces étapes ne sont pas présentées à l'utilisateur. Elles servent de guide pour l'évaluation ultérieure.
 | Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
 | :---- | :----------------- | :-------------------------- | :----------- |
 | 1 | Saisir le login "Paul" et le mot de passe "azerty" sur la page de connexion, puis valider. | Redirection vers la page d'accueil utilisateur (`UserHome`). Le menu de navigation est visible. | **Visibilité de l'état du système** : L'utilisateur sait qu'il est connecté. |
@@ -23,10 +26,11 @@ Paul lance l'application pour la première fois de la journée.
 
 **Objectif :** Découvrir des profils intéressants sans effort de mémorisation.
 
-### Contexte
+### Contexte (Information présentée à l'utilisateur)
 Paul est connecté et souhaite élargir son réseau.
 
-### Étapes
+### Étapes d'Évaluation (Usage interne uniquement)
+> **Note :** Ces étapes ne sont pas présentées à l'utilisateur. Elles servent de guide pour l'évaluation ultérieure.
 | Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
 | :---- | :----------------- | :-------------------------- | :----------- |
 | 1 | Cliquer sur l'onglet/lien "Trouver des personnes" (`Findpeople`). | Affichage de la liste des cartes de profils (`PeopleCardFind`). Chaque carte affiche clairement le nom et une option d'interaction. | **Reconnaissance plutôt que rappel** : Les options sont visibles, Paul n'a pas à se souvenir comment chercher. |
@@ -41,10 +45,11 @@ Paul est connecté et souhaite élargir son réseau.
 
 **Objectif :** Engager le dialogue avec un nouveau contact et vérifier la continuité.
 
-### Contexte
+### Contexte (Information présentée à l'utilisateur)
 Paul a identifié un profil qui l'intéresse dans la liste.
 
-### Étapes
+### Étapes d'Évaluation (Usage interne uniquement)
+> **Note :** Ces étapes ne sont pas présentées à l'utilisateur. Elles servent de guide pour l'évaluation ultérieure.
 | Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
 | :---- | :----------------- | :-------------------------- | :----------- |
 | 1 | Identifier un profil et cliquer sur le bouton pour envoyer un message (`createMessage`). | Le système confirme l'action (feedback visuel). | **Feedback** : Le système informe l'utilisateur que son action a eu un effet. |
@@ -61,10 +66,11 @@ Paul a identifié un profil qui l'intéresse dans la liste.
 
 **Objectif :** Naviguer efficacement entre plusieurs discussions parallèles.
 
-### Contexte
+### Contexte (Information présentée à l'utilisateur)
 Laura est connectée et a plusieurs conversations en cours. Elle est pressée.
 
-### Étapes
+### Étapes d'Évaluation (Usage interne uniquement)
+> **Note :** Ces étapes ne sont pas présentées à l'utilisateur. Elles servent de guide pour l'évaluation ultérieure.
 | Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
 | :---- | :----------------- | :-------------------------- | :----------- |
 | 1 | Accéder à la page "Messages". | Liste des conversations à gauche, active à droite. | **Flexibilité et efficience** : Accès direct. |
@@ -81,10 +87,11 @@ Laura est connectée et a plusieurs conversations en cours. Elle est pressée.
 
 **Objectif :** Quitter l'application proprement.
 
-### Contexte
+### Contexte (Information présentée à l'utilisateur)
 Laura a fini ses échanges et souhaite fermer sa session.
 
-### Étapes
+### Étapes d'Évaluation (Usage interne uniquement)
+> **Note :** Ces étapes ne sont pas présentées à l'utilisateur. Elles servent de guide pour l'évaluation ultérieure.
 | Étape | Action Utilisateur | Réponse Attendue du Système | Principe IHM |
 | :---- | :----------------- | :-------------------------- | :----------- |
 | 1 | Se déconnecter via le bouton de profil ou menu. | Retour à la page de login. Session nettoyée. | **Sortie d'urgence** : Quitter l'état connecté à tout moment. |
