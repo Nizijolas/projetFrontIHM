@@ -3,6 +3,8 @@
 Application Ping Pong Matcher -> un prototype haute fidélité pour le projet de IHM 2.
 Il s'agit d'un réseau social pour jouer au ping pong.
 
+*Le projet terminé se trouve sur la branche master*
+
 ## Lancer le serveur de développement pour voir le projet
 
 Après avoir cloner le projet sur votre machine, faire à la racine du projet:
