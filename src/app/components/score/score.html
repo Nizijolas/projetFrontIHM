@@ -53,6 +53,9 @@
     <app-error (close)="toggleShowError()"> Pas d'égalité possible entre les Sets et le gagnant doit avoir au moins 11
         points </app-error>
     }
+    @if(showSuccess()){
+        <app-success (close)="toggleShowSucess()"> La partie a bien été enregistrée</app-success>
+    }
 </form>
 
 
