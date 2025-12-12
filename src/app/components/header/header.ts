@@ -36,7 +36,6 @@ export class Header {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    console.log("heeyyayra");
     this.showBurger.set(false);
   }
 

@@ -120,7 +120,6 @@ h3{
     color: #90a4ae;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .partie-card {
         padding: 1.25rem;
