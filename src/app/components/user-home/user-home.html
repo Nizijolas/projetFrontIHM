@@ -1,6 +1,5 @@
 @if(isConnected()){
-<h2> Bienvenue {{ getPseudo()}}</h2>
-<p> Ce que les autres voient : </p>
+<p> Bienvenue {{ getPseudo()}}, ce que les autres voient de vous : </p>
 <app-profile-card (showParties)="toggleModalParties()"></app-profile-card>
 <button (click)="navigateToEdit()">
     Modifier votre profil

@@ -1,6 +1,6 @@
 @if(connexions.someoneIsLog){
    
-    <h4> Voici des joueurs autour de votre position : </h4>
+    <p> Voici des joueurs autour de votre position  </p>
     <select [formControl]="filterInput" (change)="applyFilter()">
         <option value="noFilter" selected>Pas de filtre</option>
         <option value="débutant">débutant</option>

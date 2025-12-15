@@ -1,7 +1,12 @@
 :host{
     padding-bottom: 30px;
 }
-
+p {
+    margin: 30px auto;
+    width: 60%;
+    font-size: medium;
+    font-weight: 600;
+}
 #partie {
     position: fixed;
     top: 0;
