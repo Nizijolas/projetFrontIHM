@@ -1,5 +1,6 @@
-h3 {
-    margin: 30px auto;
+h4 {
+    margin: auto;
+    margin-top: 30px;
     width: 70%;
 }
 
@@ -16,3 +17,21 @@ h3 {
 
 }
 
+select {
+    width: 40%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    margin: 20px auto;
+}
+
+select:focus {
+    outline: none;
+    border-color: #55b5e0;
+}

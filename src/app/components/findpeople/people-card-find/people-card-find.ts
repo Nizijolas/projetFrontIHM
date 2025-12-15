@@ -1,4 +1,4 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, computed, inject, input, output } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { OnInit } from '@angular/core';
 import { Connexions } from '../../../services/connexions';
@@ -25,7 +25,6 @@ export class PeopleCardFind implements OnInit{
   connexions = inject(Connexions);
   navigate = output<string>();
   
-
   
   ngOnInit(): void {
     if (this.connexions.messages.find(m => m.player?.name == this.name()) != undefined )

@@ -4,12 +4,10 @@
 </div>
 <div class="form-container">
     <label for="niveau">Niveau</label>
-    <input list="niveaux" id="niveau" name="niveau"  [formControl]="niveauInput">
-    <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+    <select [formControl]="niveauInput">
+        <option value="débutant">débutant</option>
+        <option value="intermédiaire">intermédiaire</option>
+        <option value="avancé">avancé</option>
     </select>
     <label for="age">Âge</label>
     <input type="number" id="age" name="age" placeholder="Entrez votre âge" [formControl]="ageInput">

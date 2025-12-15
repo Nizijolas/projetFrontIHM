@@ -15,7 +15,7 @@ label {
 
 input[type="text"],
 input[type="number"],
-textarea {
+textarea, select {
     width: 100%;
     padding: 10px 12px;
     border: 2px solid #ddd;
@@ -25,9 +25,10 @@ textarea {
     box-sizing: border-box;
 }
 
+
 input[type="text"]:focus,
 input[type="number"]:focus,
-textarea:focus {
+textarea:focus, select:focus {
     outline: none;
     border-color: #55b5e0;
 }
@@ -41,7 +42,9 @@ input::placeholder,
 textarea::placeholder {
     color: #999;
 }
-
+select{
+    background-color: white;
+}
 #save{
     display: block;
     margin: auto;

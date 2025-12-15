@@ -2,6 +2,9 @@
 <h2> Bienvenue {{ getPseudo()}}</h2>
 <p> Ce que les autres voient : </p>
 <app-profile-card (showParties)="toggleModalParties()"></app-profile-card>
+<button (click)="navigateToEdit()">
+    Modifier votre profil
+</button>
 @if(showParties()){
 <div id="partie">
     <app-display-scores [name]="getPseudo()" [parties]="this.fakeParties.fakeparties"

@@ -14,3 +14,18 @@
     backdrop-filter: blur(15px);
 
 }
+button {
+    width: 30%;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: lightskyblue;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}

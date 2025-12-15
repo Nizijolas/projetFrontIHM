@@ -4,6 +4,8 @@ import { ProfileCard } from "./profile-card/profile-card";
 import { Notconnected } from '../notconnected/notconnected';
 import { DisplayScores } from '../score/display-scores/display-scores';
 import { Fakeparties } from '../../services/fakeparties';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-user-home',
@@ -15,6 +17,7 @@ export class UserHome {
   private connexions = inject(Connexions);
   showParties = signal(false);
   fakeParties = inject(Fakeparties);
+  router = inject(Router);
 
 
   isConnected():boolean{
@@ -26,5 +29,9 @@ export class UserHome {
   }
   toggleModalParties():void{
     this.showParties.set(!this.showParties());
+  }
+
+  navigateToEdit() {
+    this.router.navigateByUrl('/edit');
   }
 }
