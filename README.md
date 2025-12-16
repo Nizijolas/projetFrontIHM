@@ -29,5 +29,9 @@ Une fois le serveur lancé vous pouvez vous rendre sur l'adresse : `http://local
 Tous les documents  pour le projet (scénarios, cahier des charges  etc. ) se trouvent dans le dossier `Documents IHM`.  
 L'application est responsive elle est faîtes pour pouvoir être utilisé aussi bien sur téléphone, tablette, laptop ou desktop.
 
+### Prototype basse fidélité 
+
+Voici le lien vers le prototype figma basse fidélité que nous avions fais à l'origine :  
+https://www.figma.com/design/WtyqsXLyPI2kphUD9YozrA/Untitled?node-id=0-1&p=f
 
 
