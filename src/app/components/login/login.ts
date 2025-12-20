@@ -42,7 +42,8 @@ export class Login {
   }
 
   register(): void {
-    alert("On ne peut pas s'enregister car pas de BDD dans cette version");
+    alert("On ne peut pas s'enregister car pas de BDD dans cette version --- Pour le login utilisez : Laura OU Paul /// mdp : azerty");
+    
   }
 
 }
