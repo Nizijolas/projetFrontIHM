@@ -27,7 +27,7 @@ Une fois le serveur lancé vous pouvez vous rendre sur l'adresse : `http://local
 ## Documentation IHM.
 
 Tous les documents  pour le projet (scénarios, cahier des charges  etc. ) se trouvent dans le dossier `Documents IHM`.  
-L'application est responsive elle est faîtes pour pouvoir être utilisé aussi bien sur téléphone, tablette, laptop ou desktop.
+L'application est responsive elle est faite pour pouvoir être utilisée aussi bien sur téléphone, tablette, laptop ou desktop.
 
 ### Prototype basse fidélité 
 
