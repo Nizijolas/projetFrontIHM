@@ -31,7 +31,7 @@ L'application est responsive elle est faîtes pour pouvoir être utilisé aussi 
 
 ### Prototype basse fidélité 
 
-Voici le lien vers le prototype figma basse fidélité que nous avions fais à l'origine :  
+Voici le lien vers le prototype figma basse fidélité que nous avions fais à l'origine ( il n'y avait à l'origne pas la page "mes scores"):  
 https://www.figma.com/design/WtyqsXLyPI2kphUD9YozrA/Untitled?node-id=0-1&p=f
 
 
