@@ -1,11 +1,11 @@
 # ApplicationPingPong
 
-Application Ping Pong Matcher -> un prototype haute fidélité pour le projet de IHM 2.
+Application Ping Pong Matcher notre prototype haute fidélité pour le projet d'IHM 2.
 Il s'agit d'un réseau social pour jouer au ping pong.
 
-*Le projet terminé se trouve sur la branche master*
+*Le projet terminé se trouve sur la branche principale 'master'*
 
-## Lancer le serveur de développement pour voir le projet
+## Pour voir le projet : Lancer le serveur de développement 
 **Premièrement**  cloner le projet sur votre machine : `git clone https://github.com/Nizijolas/projetFrontIHM.git`  
 **Ensuite** faire à la racine du projet:
 
